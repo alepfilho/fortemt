@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#bg-rotate {
+  position: absolute;
+  top: -120vh;
+  left: 0;
+  transform: scale(0.7) rotate(0);
+  -webkit-animation: rotate infinite 40s;
+          animation: rotate infinite 40s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: scale(0.7) rotate(360deg);
+  }
+  0% {
+    transform: scale(0.7) rotate(0);
+  }
+  100% {
+    transform: scale(0.7) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0.7) rotate(360deg);
+  }
+  0% {
+    transform: scale(0.7) rotate(0);
+  }
+  100% {
+    transform: scale(0.7) rotate(360deg);
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  background-color: #323c6b;
+  font-size: 2rem;
+  transform: scale(1);
+  color: #fff;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s;
+  padding: 20px;
+  border: 3px solid #323c6b;
+  display: inline-block;
+  text-decoration: none;
+}
+a:hover {
+  transform: scale(1.1);
+}
+a.invert {
+  color: #323c6b;
+  background-color: transparent;
+  border: 3px solid #323c6b;
+}
+a.invert:hover {
+  transform: scale(1.1);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  font-size: 16;
+  color: #323c6b;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.7;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+ul li {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+ul li svg {
+  margin-right: 10px;
+}
+ul.social {
+  display: flex;
+}
+ul.social li {
+  margin-right: 15px;
+  margin-left: 0;
+}
+ul.social li svg {
+  margin: 0;
+}
+ul.social li a {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h5 {
+  font-size: 14px;
+  color: #323c6b;
+  font-weight: 400;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.container .action {
+  margin-top: 10px;
+}
+.container .esquerda {
+  width: 45vw;
+}
+.container .direita {
+  width: 50vw;
+  padding: 20px;
+}
+.container .direita h1 {
+  font-size: 3rem;
+  color: #323c6b;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.container .direita h3 {
+  font-size: 1rem;
+  color: #323c6b;
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+.container .direita p {
+  font-size: 20px;
+  color: #323c6b;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .infos {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  .container .esquerda {
+    max-height: 500px;
+  }
+  .container .esquerda img {
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  .container .esquerda,
+.container .direita {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  #bg-rotate {
+    position: absolute;
+    top: -80vh;
+    left: -125vh;
+    transform: scale(0.3) rotate(0);
+    -webkit-animation: rotate infinite 40s;
+            animation: rotate infinite 40s;
+  }
+
+  @-webkit-keyframes rotate {
+    0% {
+      transform: scale(0.3) rotate(360deg);
+    }
+    0% {
+      transform: scale(0.3) rotate(0);
+    }
+    100% {
+      transform: scale(0.3) rotate(360deg);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: scale(0.3) rotate(360deg);
+    }
+    0% {
+      transform: scale(0.3) rotate(0);
+    }
+    100% {
+      transform: scale(0.3) rotate(360deg);
+    }
+  }
+  ul {
+    grid-template-columns: auto auto;
+  }
+
+  a {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+  }
+  a svg {
+    margin-right: 10px;
+  }
+  a.invert svg {
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
